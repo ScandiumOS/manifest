@@ -25,7 +25,7 @@
   <!-- Remove first some AOSP repos -->
   <include name="remove.xml" />
 
-  <project path="manifest" name="android_scandium_manifest" remote="scandium" revision="Holocaust_A13" />
+  <project path="manifest" name="android_scandium_manifest" remote="scandium" revision="Tengkawang" />
   <project path="art" name="art" remote="scandium" />
   <project path="bionic" name="bionic" remote="scandium" />
   <project path="libcore" name="libcore" remote="scandium" />

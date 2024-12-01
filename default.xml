@@ -3,7 +3,6 @@
   
   <remote  name="aosp"
            fetch="https://android.googlesource.com/"
-           review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-13.0.0_r67"
            remote="aosp"
            sync-j="4" />

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   
-    <remote  name="aosp"
-           fetch="https://android.googlesource.com/"/>
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com/" />
   <default revision="refs/tags/android-13.0.0_r67"
            remote="aosp"
            sync-j="4" />
@@ -1194,9 +1194,10 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
   <!-- END open-source projects -->
 
-
+  <!-- Include snippets xml files -->
   <include name="snippets/remove.xml" />
   <include name="snippets/scandium.xml" />
   <include name="snippets/lineage.xml" />
+
 </manifest>
 

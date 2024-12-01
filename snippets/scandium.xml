@@ -22,14 +22,12 @@
   <remote name="BR-x86" 
           fetch="https://github.com/BlissRoms-x86" />
 
-  <!-- Remove first some AOSP repos -->
-  <include name="remove.xml" />
-
+  <!-- Gitlab remote -->
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+  
   <project path="manifest" name="android_scandium_manifest" remote="scandium" revision="Tengkawang" />
-  <project path="art" name="art" remote="scandium" />
   <project path="bionic" name="bionic" remote="scandium" />
-  <project path="libcore" name="libcore" remote="scandium" />
-  <project path="build/blueprint" name="build_blueprint" remote="scandium" />
   <project path="bootable/recovery" name="bootable_recovery" remote="scandium" />
   
   <!-- Build -->
@@ -51,11 +49,9 @@
   
   <!-- External -->
   <project path="external/faceunlock" name="external_faceunlock" remote="scandium" />
-  <project path="external/selinux" name="external_selinux" remote="scandium" />
   <project path="external/roboto-fonts" name="platform_external_roboto-fonts" remote="BlissRoms" />
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" revision="refs/tags/android-11.0.0_r45" />
   <project path="external/piex" name="platform_external_piex" remote="BlissRoms" />
-  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="scandium" />
   
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" remote="scandium" />
@@ -63,15 +59,12 @@
   <project path="frameworks/native" name="frameworks_native" remote="scandium" />
   <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" remote="scandium" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="scandium" />
-  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="scandium" />
-  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="scandium" />
-  
+
   <!-- Hardware -->
   <project path="hardware/interfaces" name="hardware_interfaces" remote="scandium" />
   <project path="hardware/scandium/interfaces" name="hardware_scandium_interfaces" remote="scandium" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="scandium" />
   <project path="hardware/ril" name="platform_hardware_ril" remote="BlissRoms" />
-  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="scandium" />
   <project path="hardware/lineage/compat" name="platform_hardware_lineage_compat" remote="BlissRoms" />
 
   <!-- Hardware (Qcom)-->
@@ -97,7 +90,6 @@
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="scandium" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="scandium" />
   <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" remote="scandium" />
-  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="scandium" />
   <project path="packages/apps/TouchGestures" name="platform_packages_apps_TouchGestures" remote="BlissRoms" />
   <project path="packages/apps/SetupWizard" name="android_packages_setup_wizard" remote="scandium" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="scandium" />
@@ -106,8 +98,6 @@
   <project path="packages/apps/ScandiumSystemUI" name="platform_packages_apps_BlissSystemUI" remote="BlissRoms" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="scandium" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="scandium" />
-  <project path="packages/modules/Permission" name="packages_modules_Permission" remote="scandium" />
-  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="scandium" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="scandium" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="scandium" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="scandium" />
@@ -127,7 +117,6 @@
   
   <!-- System -->
   <project path="system/core" name="system_core" remote="scandium" />
-  <project path="system/core" name="platform_system_core" remote="BlissRoms" />
   <project path="system/extras" name="platform_system_extras" remote="BlissRoms" />
   <project path="system/keymaster" name="platform_system_keymaster" remote="BlissRoms" />
   <project path="system/libhwbinder" name="platform_system_libhwbinder" remote="BlissRoms" />
@@ -136,18 +125,11 @@
   <project path="system/sepolicy" name="system_sepolicy" remote="scandium" />
   <project path="system/update_engine" name="platform_system_update_engine" groups="pdk" remote="BlissRoms" />
   <project path="system/vold" name="system_vold" remote="scandium" />
-  <project path="system/memory/lmkd" name="system_memory_lmkd" remote="scandium" />
   <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="BlissRoms" />
   
   <!-- Vendor -->
   <project path="vendor/scandium" name="android_vendor_scandium" remote="scandium" />
   <project path="vendor/themes" name="android_vendor_themes" remote="scandium" />
-  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="scandium" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_commonsys-intf_display" remote="scandium" />
-  <project path="vendor/qcom/opensource/commonsys/display" name="vendor_qcom_opensource_commonsys_display" remote="scandium" />
-  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="scandium" />
-  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" remote="scandium" />
-  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="scandium" />
   <project path="vendor/support" name="platform_vendor_support" remote="BlissRoms" />
   <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gitlab" clone-depth="1" revision="tau" />
   <project path="vendor/overlays" name="platform_vendor_overlays" remote="BlissRoms" />
